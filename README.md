@@ -60,9 +60,17 @@ It contains synthetic examples of:
 
 No record in the demo database represents a real person or transaction.
 
-## Run the demo on Windows
+## Quick start — portfolio demo
+
+> **Important:** To open the application with the included sample data, use `ejecutar_demo.bat`.
+>
+> `ejecutar_app.bat` starts the application using the current local database (`renta_triciclo.db`).
+> If that database does not exist, the application creates a new empty database.
+
+### Windows setup
 
 1. Install Python 3.
+
 2. Create and activate a virtual environment:
 
 ```bash
@@ -76,29 +84,44 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-4. Run:
+4. To review the portfolio version with sample data, run:
 
 ```text
 ejecutar_demo.bat
 ```
 
-`ejecutar_demo.bat` copies `data/demo.db` to the local working database `renta_triciclo.db` and starts the application.
+`ejecutar_demo.bat` restores the synthetic database from `data/demo.db` into the local working database `renta_triciclo.db` and then starts the application.
 
-> `renta_triciclo.db` is ignored by Git so a local or real operational database is never intended to be committed.
+> **Note:** Running `ejecutar_demo.bat` resets the local database to the included synthetic demo data.
+
+### Continue with the current local database
+
+Use:
+
+```text
+ejecutar_app.bat
+```
+
+This starts the application without resetting the database.
+
+If `renta_triciclo.db` does not exist, the application starts with a new empty database.
+
+### Command line
 
 To restore the demo manually:
 
 ```bash
 python scripts/reset_demo.py
+python main.py
 ```
 
-## Run with an empty/local database
+To start the application without restoring the demo:
 
 ```bash
 python main.py
 ```
 
-If `renta_triciclo.db` does not exist, the application creates the required SQLite structure automatically.
+> `renta_triciclo.db` is ignored by Git so a local or real operational database is never intended to be committed.
 
 ## Project structure
 
