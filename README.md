@@ -45,6 +45,28 @@ These rules are implemented in the service layer rather than the UI.
 - PyInstaller build script for Windows deployment
 - Local database stored beside the application/executable
 
+## Screenshots
+
+### Inicio
+
+![Inicio](docs/screenshots/inicio.jpg)
+
+### Nuevo movimiento
+
+![Nuevo movimiento](docs/screenshots/nuevo-movimiento.jpg)
+
+### Movimientos
+
+![Movimientos](docs/screenshots/movimientos.jpg)
+
+### Resumen anual
+
+![Resumen anual](docs/screenshots/resumen-anual.jpg)
+
+### Configuración
+
+![Configuración](docs/screenshots/configuracion.jpg)
+
 ## Demo database
 
 The repository includes `data/demo.db`, a SQLite database created specifically for portfolio review.
